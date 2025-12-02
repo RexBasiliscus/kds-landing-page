@@ -1,5 +1,5 @@
 import React from "react";
-import plantImg from "../assets/rastlina.png";
+import plantImg from "../assets/rozca+roka.png";
 
 const EnvironmentSection = () => {
   return (

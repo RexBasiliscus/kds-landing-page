@@ -8,84 +8,11 @@ import ClientsSection from "./components/ClientsSection";
 import TestimonialsCarousel from "./components/TestimonialsCarousel";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
-import vzdrzevanjeImg from "./assets/vzdrzevanje2.svg";
-import ciscenjeImg from "./assets/ciscenje2.svg";
-import zaupanjeImg from "./assets/zaupanje.png";
-import tarcaImg from "./assets/tarca.png";
-import sestavljankaImg from "./assets/sestavljanka.png";
-import civilnaImg from "./assets/cz-logo.jpg";
-import zpizImg from "./assets/logo_zpiz1.png";
-import zzzsImg from "./assets/ZZZS_logo-cropped.svg";
+import { cardsData } from "./data/cardsData";
+import { testimonialsData } from "./data/testimonialsData";
+import { clientLogos } from "./data/clientLogos";
 
 const App = () => {
-  const customersImgs = [
-    { src: civilnaImg, alt: "Civilna zaščita" },
-    { src: zpizImg, alt: "ZPIZ" },
-    { src: zzzsImg, alt: "ZZZS" },
-  ];
-
-  const cardsData = [
-    {
-      title: "Vzdrževanje objektov",
-      image: vzdrzevanjeImg,
-      description:
-        "zavezujemo se k zagotavljanju vrhunskh storitev vzdrževanja in čiščenja objektov",
-      linkText: "Poizvej več",
-    },
-    {
-      title: "Čiščenje objektov",
-      image: ciscenjeImg,
-      description:
-        "zavezujemo se k zagotavljanju vrhunskh storitev vzdrževanja in čiščenja objektov",
-      linkText: "Poizvej več",
-    },
-    {
-      title: "Zaupanja vredni in zanesljivi",
-      image: zaupanjeImg,
-      description:
-        "Naša ekipa je skrbno izbrana in usposobljena, da zagotavlja najvišjo raven storitev",
-    },
-    {
-      title: "Natančne in kakovostne storitve",
-      image: tarcaImg,
-      description:
-        "Naša ekipa je skrbno izbrana in usposobljena, da zagotavlja najvišjo raven storitev",
-    },
-    {
-      title: "Prilagodimo se vašim potrebam",
-      image: sestavljankaImg,
-      description:
-        "Naša ekipa je skrbno izbrana in usposobljena, da zagotavlja najvišjo raven storitev.",
-    },
-  ];
-
-  const testimonialsData = [
-    {
-      company: "Podjetje d.o.o.",
-      text: "Čist in urejen ambient je za nas nadvse pomemben. KD ekipa je izjemno vestna in hitra pri delu, da poskrbijo za brezhiben čistočo.",
-    },
-    {
-      company: "Podjetje d.o.o.",
-      text: "Zelo smo zadovoljni z njihovimi storitvami. Vedno se držijo dogovorjenih rokov in delajo natančno. Njihova prilagodljivost in pozornost do podrobnosti sta resnično neprecenljivi. Priporočamo jih vsem, ki potrebujejo kakovostne storitve čiščenja in vzdrževanja.",
-    },
-    {
-      company: "Ustanove d.o.o.",
-      text: "KD ekipa je profesionalna in vedno pripravljena pomagati. Njihove storitve so vrhunske in cena je zelo konkurenčna.",
-    },
-    {
-      company: "Podjetje d.o.o.",
-      text: "Sodelujemo že več let in še nikoli nismo bili razočarani. KD ekipa zagotavlja vrhunsko kakovost in zanesljivost.",
-    },
-    {
-      company: "Organizacija d.o.o.",
-      text: "Naši prostori so vedno čisti in urejeni, zahvaljujoč KD ekipi. Priporočamo jih vsem, ki iščejo zanesljive storitve vzdrževanja.",
-    },
-    {
-      company: "Podjetje d.o.o.",
-      text: "KD ekipa je izjemno fleksibilna in se prilagaja našim potrebam. Vedno so točni in storitve so vrhunske.",
-    },
-  ];
-
   return (
     <div>
       <Header />
@@ -114,7 +41,7 @@ const App = () => {
       <EnvironmentSection />
 
       {/* Clients / Logos section */}
-      <ClientsSection logos={customersImgs} />
+      <ClientsSection logos={clientLogos} />
 
       {/* Combined illustration + testimonials section */}
       <TestimonialsCarousel testimonials={testimonialsData} />

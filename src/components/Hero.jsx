@@ -1,4 +1,4 @@
-import bckImg from "../assets/bck-img.png";
+import bckImg from "../assets/bckg-fix.jpg";
 
 const Hero = () => {
   return (
