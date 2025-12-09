@@ -4,9 +4,25 @@ import C2AButton from "./C2AButton";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // when user scrolls down more than 100px, set isScrolled to true
+      setIsScrolled(window.scrollY > 100);
+    };
+    //when user starts scrolling, call handleScroll
+    window.addEventListener("scroll", handleScroll);
+    // Cleanup on unmount
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 pt-3 md:pt-4">
+    <header
+      className={`sticky top-0 z-50 pt-3 md:pt-4 transition-colors duration-300 ${
+        isScrolled ? "bg-primary/85 pb-3" : ""
+      }`}
+    >
       <div className="container mx-auto flex items-center justify-between px-6 md:px-10">
         {/* Logo */}
         <div className="flex items-center">
