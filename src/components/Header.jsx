@@ -3,33 +3,27 @@ import headerLogo from "../assets/header-logo.svg";
 import C2AButton from "./C2AButton";
 
 const Header = () => {
-  const [isVisible, setIsVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Get the Hero h1 element position
-      const heroHeading = document.querySelector(".hero-heading");
-      if (heroHeading) {
-        const heroRect = heroHeading.getBoundingClientRect();
-        // Hide header when the h1 reaches the top of the viewport
-        setIsVisible(heroRect.top > 0);
-      }
+      // when user scrolls down more than 100px, set isScrolled to true
+      setIsScrolled(window.scrollY > 100);
     };
-
+    //when user starts scrolling, call handleScroll
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Check initial state
-
+    // Cleanup on unmount
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
-      className={`sticky top-0 z-10 transition-opacity duration-300 ${
-        isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
+      className={`sticky top-0 z-50 pt-3 md:pt-4 transition-colors duration-300 ${
+        isScrolled ? "bg-primary/85 pb-3" : ""
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between mt-6 px-6 md:px-10">
+      <div className="container mx-auto flex items-center justify-between px-6 md:px-10">
         {/* Logo */}
         <div className="flex items-center">
           <img

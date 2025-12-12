@@ -18,8 +18,9 @@ const Hero = () => {
           <div className="ml-auto w-full md:w-1/2">
             <div className="text-right text-white">
               <h1 className="hero-heading text-4xl md:text-5xl lg:text-6xl font-highlight font-bold">
-                Vaša urejenost, naš{" "}
-                <span className="text-secondary">ponos.</span>
+                Vaša urejenost,
+                <br />
+                naš <span className="text-secondary">ponos.</span>
               </h1>
               <p className="text-lg md:text-xl font-primary mt-4">
                 zavezujemo se k zagotavljanju vrhunskih storitev vzdrževanja in
