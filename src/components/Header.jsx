@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { NavLink, Link } from "react-router";
 import headerLogo from "../assets/header-logo.svg";
 import C2AButton from "./C2AButton";
 
@@ -26,44 +27,69 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between px-6 md:px-10">
         {/* Logo */}
         <div className="flex items-center">
-          <img
-            src={headerLogo}
-            alt="KD Logo"
-            className="h-10"
-          />
+          <Link
+            to="/"
+            onClick={() => setIsMobileMenuOpen(false)}
+            aria-label="Home"
+            title="Home"
+          >
+            <img
+              src={headerLogo}
+              alt="KD Logo"
+              className="h-10"
+            />
+          </Link>
         </div>
 
         {/* Navigation */}
         <nav className="hidden md:flex space-x-8">
-          <a
-            href="#about"
-            className="text-white font-primary font-medium hover:text-secondary text-base lg:text-lg"
+          <NavLink
+            to="/ciscenje"
+            className={({ isActive }) =>
+              `text-white font-primary font-medium hover:text-secondary text-base lg:text-lg ${
+                isActive ? "text-secondary" : ""
+              }`
+            }
           >
             Čiščenje objektov
-          </a>
-          <a
-            href="#services"
-            className="text-white font-primary font-medium hover:text-secondary text-base lg:text-lg"
+          </NavLink>
+          <NavLink
+            to="/vzdrzevanje"
+            className={({ isActive }) =>
+              `text-white font-primary font-medium hover:text-secondary text-base lg:text-lg ${
+                isActive ? "text-secondary" : ""
+              }`
+            }
           >
             Vzdrževanje
-          </a>
-          <a
-            href="#testimonials"
-            className="text-white font-primary font-medium hover:text-secondary text-base lg:text-lg"
+          </NavLink>
+          <NavLink
+            to="/o-nas"
+            className={({ isActive }) =>
+              `text-white font-primary font-medium hover:text-secondary text-base lg:text-lg ${
+                isActive ? "text-secondary" : ""
+              }`
+            }
           >
             O nas
-          </a>
-          <a
-            href="#contact"
-            className="text-white font-primary font-medium hover:text-secondary text-base lg:text-lg"
+          </NavLink>
+          <NavLink
+            to="/kontakt"
+            className={({ isActive }) =>
+              `text-white font-primary font-medium hover:text-secondary text-base lg:text-lg ${
+                isActive ? "text-secondary" : ""
+              }`
+            }
           >
             Kontakt
-          </a>
+          </NavLink>
         </nav>
 
         {/* Call-to-Action Button - Desktop Only */}
         <div className="hidden md:block">
-          <C2AButton btnText="Želim ponudbo" />
+          <Link to="/#contact">
+            <C2AButton btnText="Želim ponudbo" />
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -102,36 +128,57 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-primary backdrop-blur-sm">
           <nav className="container mx-auto px-6 py-4 flex flex-col space-y-4">
-            <a
-              href="#about"
-              className="text-white font-primary font-medium py-2 hover:text-secondary transition"
+            <NavLink
+              to="/ciscenje"
+              className={({ isActive }) =>
+                `text-white font-primary font-medium py-2 hover:text-secondary transition ${
+                  isActive ? "text-secondary" : ""
+                }`
+              }
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Čiščenje objektov
-            </a>
-            <a
-              href="#services"
-              className="text-white font-primary font-medium py-2 hover:text-secondary transition"
+            </NavLink>
+            <NavLink
+              to="/vzdrzevanje"
+              className={({ isActive }) =>
+                `text-white font-primary font-medium py-2 hover:text-secondary transition ${
+                  isActive ? "text-secondary" : ""
+                }`
+              }
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Vzdrževanje
-            </a>
-            <a
-              href="#testimonials"
-              className="text-white font-primary font-medium py-2 hover:text-secondary transition"
+            </NavLink>
+            <NavLink
+              to="/o-nas"
+              className={({ isActive }) =>
+                `text-white font-primary font-medium py-2 hover:text-secondary transition ${
+                  isActive ? "text-secondary" : ""
+                }`
+              }
               onClick={() => setIsMobileMenuOpen(false)}
             >
               O nas
-            </a>
-            <a
-              href="#contact"
-              className="text-white font-primary font-medium py-2 hover:text-secondary transition"
+            </NavLink>
+            <NavLink
+              to="/kontakt"
+              className={({ isActive }) =>
+                `text-white font-primary font-medium py-2 hover:text-secondary transition ${
+                  isActive ? "text-secondary" : ""
+                }`
+              }
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Kontakt
-            </a>
+            </NavLink>
             <div className="pt-2">
-              <C2AButton btnText="Želim ponudbo" />
+              <Link
+                to="/#contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <C2AButton btnText="Želim ponudbo" />
+              </Link>
             </div>
           </nav>
         </div>

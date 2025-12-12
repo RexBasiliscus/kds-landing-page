@@ -1,7 +1,6 @@
 const Features = ({ cardsData }) => {
   return (
     <section className="max-w-6xl mx-auto px-6 mt-10">
-      {/* Use flex exclusively: column on mobile, row on md+ */}
       <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8">
         {cardsData &&
           cardsData.map((card, idx) => (
