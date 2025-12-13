@@ -1,5 +1,5 @@
-import React, { useEffect, useMemo, useState } from "react";
-import imgSvg from "../assets/img.svg";
+import { useEffect, useMemo, useState } from "react";
+import imgSvg from "../assets/img2.png";
 
 const TestimonialsCarousel = ({ testimonials = [] }) => {
   const [index, setIndex] = useState(0);
@@ -51,7 +51,7 @@ const TestimonialsCarousel = ({ testimonials = [] }) => {
   }, [index, testimonials, visibleCount]);
 
   return (
-    <section className="relative bg-secondary">
+    <section className="relative bg-background">
       {/* Illustration fills the whole section */}
       <img
         src={imgSvg}
