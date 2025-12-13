@@ -1,7 +1,14 @@
-import React from "react";
 import { Link } from "react-router";
 
-const C2AButton = ({ btnText, className = "", to, href, onClick }) => {
+const C2AButton = ({
+  btnText,
+  className = "",
+  to,
+  href,
+  onClick,
+  type = "button",
+  disabled = false,
+}) => {
   const classes =
     "bg-accent text-white px-4 py-2 rounded-lg font-primary font-medium text-sm hover:bg-orange-600 transition-colors inline-block " +
     className;
@@ -32,9 +39,10 @@ const C2AButton = ({ btnText, className = "", to, href, onClick }) => {
 
   return (
     <button
-      type="button"
+      type={type}
       className={classes}
       onClick={onClick}
+      disabled={disabled}
     >
       {btnText}
     </button>
