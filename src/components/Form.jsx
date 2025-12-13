@@ -1,9 +1,11 @@
-import React from "react";
 import C2AButton from "./C2AButton";
 
 const Form = () => {
   return (
-    <section className="bg-secondary py-12 px-4">
+    <section
+      id="contact"
+      className="bg-secondary py-12 px-4"
+    >
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-8">
           <h2 className="text-2xl md:text-3xl font-extrabold text-primary">

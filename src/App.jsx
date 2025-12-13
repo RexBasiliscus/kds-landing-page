@@ -1,57 +1,93 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Cards from "./components/Cards";
-import Features from "./components/Features";
-import C2AButton from "./components/C2AButton";
-import EnvironmentSection from "./components/EnvironmentSection";
-import ClientsSection from "./components/ClientsSection";
-import TestimonialsCarousel from "./components/TestimonialsCarousel";
-import Form from "./components/Form";
-import Footer from "./components/Footer";
-import { cardsData } from "./data/cardsData";
-import { testimonialsData } from "./data/testimonialsData";
-import { clientLogos } from "./data/clientLogos";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router";
+import { useEffect, useRef } from "react";
+import Home from "./pages/Home";
+import Ciscenje from "./pages/Ciscenje";
+import Vzdrzevanje from "./pages/Vzdrzevanje";
+import Onas from "./pages/Onas";
+import Kontakt from "./pages/Kontakt";
+import MainLayout from "./layouts/MainLayout";
+import { scrollToTop } from "./utils/scrollToTop";
 
 const App = () => {
+  function ScrollHandler() {
+    const location = useLocation();
+
+    // Track previous pathname to only trigger when the path actually changes
+    const lastPathRef = useRef(location.pathname);
+    const lastHashRef = useRef(location.hash);
+
+    useEffect(() => {
+      const prev = lastPathRef.current;
+      const curr = location && location.pathname;
+      const prevHash = lastHashRef.current;
+      const currHash = location && location.hash;
+
+      // If the pathname actually changed
+      if (prev !== curr) {
+        // If we navigated away from a hash (e.g. /#contact -> /ciscenje),
+        // perform an immediate jump to top to override any anchor/scroll anchoring behavior.
+        if (prevHash) {
+          scrollToTop({ behavior: "auto" });
+          lastPathRef.current = curr;
+          lastHashRef.current = currHash;
+          return;
+        }
+
+        // Otherwise schedule a smooth scroll after paint
+        const raf = requestAnimationFrame(() => scrollToTop());
+        lastPathRef.current = curr;
+        lastHashRef.current = currHash;
+        return () => cancelAnimationFrame(raf);
+      }
+
+      // If hash was removed while staying on same path (e.g. /#contact -> / on Home page),
+      // scroll to top smoothly
+      if (prevHash && !currHash) {
+        scrollToTop({ behavior: "smooth" });
+      }
+
+      // keep refs in sync for same-path (e.g. hash changes)
+      lastPathRef.current = curr;
+      lastHashRef.current = currHash;
+    }, [location && location.pathname, location && location.hash]);
+
+    return null;
+  }
+
   return (
-    <div>
-      <Header />
-      <Hero />
-      <Cards cardsData={[cardsData[0], cardsData[1]]} />
-      {/* Section header below cards */}
-      <div className="text-center mt-16">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-secondary">
-          Zakaj izbrati <span className="text-primary">prav nas?</span>
-        </h2>
-        <p className="mt-3 text-black font-semibold max-w-2xl mx-auto">
-          zavezujemo se k zagotavljanju vrhunskih storitev vzdrževanja in
-          čiščenja objektov
-        </p>
-      </div>
-      <Features cardsData={[cardsData[2], cardsData[3], cardsData[4]]} />
-
-      <div className="flex justify-center mt-10 mb-10">
-        <C2AButton
-          btnText="Poizvej več o nas"
-          className="bg-orange-500 hover:bg-orange-600 text-white rounded-lg px-4 pt-2 text-base md:text-lg font-semibold w-60 md:w-60 text-center"
-        />
-      </div>
-
-      {/* Environment responsibility section */}
-      <EnvironmentSection />
-
-      {/* Clients / Logos section */}
-      <ClientsSection logos={clientLogos} />
-
-      {/* Combined illustration + testimonials section */}
-      <TestimonialsCarousel testimonials={testimonialsData} />
-
-      {/* Contact form section */}
-      <Form />
-
-      {/* Footer */}
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <ScrollHandler />
+      <Routes>
+        {/* Single main layout for all pages */}
+        <Route element={<MainLayout />}>
+          <Route
+            path="/"
+            element={<Home />}
+          />
+          <Route
+            path="/ciscenje"
+            element={<Ciscenje />}
+          />
+          <Route
+            path="/vzdrzevanje"
+            element={<Vzdrzevanje />}
+          />
+          <Route
+            path="/o-nas"
+            element={<Onas />}
+          />
+          <Route
+            path="/kontakt"
+            element={<Kontakt />}
+          />
+          {/* Fallback */}
+          <Route
+            path="*"
+            element={<Home />}
+          />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 

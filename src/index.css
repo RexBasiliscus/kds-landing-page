@@ -3,3 +3,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* NavLink underline + delayed stroke effect */
+.nav-link {
+  position: relative;
+  display: inline-block;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background-color: currentColor;
+  transition: width 220ms ease, opacity 120ms ease;
+  opacity: 0;
+}
+.nav-link.active::after {
+  width: 100%;
+  opacity: 1;
+  transition-delay: 120ms; /* delayed stroke */
+}
+
+/* small adjustment for mobile where bottom space differs */
+@media (max-width: 640px) {
+  .nav-link::after {
+    bottom: -6px;
+  }
+}
