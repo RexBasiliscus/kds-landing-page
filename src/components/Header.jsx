@@ -46,8 +46,8 @@ const Header = () => {
           <NavLink
             to="/ciscenje"
             className={({ isActive }) =>
-              `text-white font-primary font-medium hover:text-secondary text-base lg:text-lg ${
-                isActive ? "text-secondary" : ""
+              `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-lg ${
+                isActive ? "text-secondary active" : ""
               }`
             }
           >
@@ -56,8 +56,8 @@ const Header = () => {
           <NavLink
             to="/vzdrzevanje"
             className={({ isActive }) =>
-              `text-white font-primary font-medium hover:text-secondary text-base lg:text-lg ${
-                isActive ? "text-secondary" : ""
+              `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-lg ${
+                isActive ? "text-secondary active" : ""
               }`
             }
           >
@@ -66,8 +66,8 @@ const Header = () => {
           <NavLink
             to="/o-nas"
             className={({ isActive }) =>
-              `text-white font-primary font-medium hover:text-secondary text-base lg:text-lg ${
-                isActive ? "text-secondary" : ""
+              `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-lg ${
+                isActive ? "text-secondary active" : ""
               }`
             }
           >
@@ -76,8 +76,8 @@ const Header = () => {
           <NavLink
             to="/kontakt"
             className={({ isActive }) =>
-              `text-white font-primary font-medium hover:text-secondary text-base lg:text-lg ${
-                isActive ? "text-secondary" : ""
+              `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-lg ${
+                isActive ? "text-secondary active" : ""
               }`
             }
           >
@@ -87,9 +87,7 @@ const Header = () => {
 
         {/* Call-to-Action Button - Desktop Only */}
         <div className="hidden md:block">
-          <Link to="/#contact">
-            <C2AButton btnText="Želim ponudbo" />
-          </Link>
+          <C2AButton to="/#contact" btnText="Želim ponudbo" />
         </div>
 
         {/* Mobile Menu Button */}
@@ -131,8 +129,8 @@ const Header = () => {
             <NavLink
               to="/ciscenje"
               className={({ isActive }) =>
-                `text-white font-primary font-medium py-2 hover:text-secondary transition ${
-                  isActive ? "text-secondary" : ""
+                `nav-link text-white font-primary font-medium py-2 hover:text-secondary transition ${
+                  isActive ? "text-secondary active" : ""
                 }`
               }
               onClick={() => setIsMobileMenuOpen(false)}
@@ -173,12 +171,11 @@ const Header = () => {
               Kontakt
             </NavLink>
             <div className="pt-2">
-              <Link
+              <C2AButton
                 to="/#contact"
+                btnText="Želim ponudbo"
                 onClick={() => setIsMobileMenuOpen(false)}
-              >
-                <C2AButton btnText="Želim ponudbo" />
-              </Link>
+              />
             </div>
           </nav>
         </div>

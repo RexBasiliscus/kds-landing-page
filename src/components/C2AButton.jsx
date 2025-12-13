@@ -1,16 +1,43 @@
 import React from "react";
+import { Link } from "react-router";
 
-const C2AButton = ({ btnText, className = "" }) => {
+const C2AButton = ({ btnText, className = "", to, href, onClick }) => {
+  const classes =
+    "bg-accent text-white px-4 py-2 rounded-lg font-primary font-medium text-sm hover:bg-orange-600 transition-colors inline-block " +
+    className;
+
+  if (to) {
+    return (
+      <Link
+        to={to}
+        className={classes}
+        onClick={onClick}
+      >
+        {btnText}
+      </Link>
+    );
+  }
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        className={classes}
+        onClick={onClick}
+      >
+        {btnText}
+      </a>
+    );
+  }
+
   return (
-    <a
-      href="#request-quote"
-      className={
-        "bg-accent text-white px-4 py-2 rounded-lg font-primary font-medium text-sm hover:bg-orange-600 transition-colors inline-block " +
-        className
-      }
+    <button
+      type="button"
+      className={classes}
+      onClick={onClick}
     >
       {btnText}
-    </a>
+    </button>
   );
 };
 
