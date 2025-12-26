@@ -22,7 +22,7 @@ const Hero = () => {
                 <br />
                 naš <span className="text-secondary">ponos.</span>
               </h1>
-              <p className="text-lg md:text-xl font-primary mt-4">
+              <p className="text-lg md:text-xl font-primary font-medium mt-4">
                 zavezujemo se k zagotavljanju vrhunskih storitev vzdrževanja in
                 čiščenja objektov
               </p>
