@@ -1,10 +1,18 @@
-import React from "react";
+import CiscenjeHero from "../components/CiscenjeHero";
+import Services from "../components/Services";
+import CommentsSection from "../components/CommentsSection";
+import { ciscenjeServices } from "../data/ciscenjeServices";
+import { testimonialsData } from "../data/testimonialsData";
+import WhyChooseUs from "../components/WhyChooseUs";
 
 const Ciscenje = () => {
   return (
-    <main className="min-h-[60vh] flex items-center justify-center">
-      <h1 className="text-3xl font-extrabold">Čiščenje</h1>
-    </main>
+    <>
+      <CiscenjeHero />
+      <Services services={ciscenjeServices} />
+      <CommentsSection comments={testimonialsData} />
+      <WhyChooseUs className="pb-24" />
+    </>
   );
 };
 

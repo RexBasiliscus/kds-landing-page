@@ -21,7 +21,11 @@ const Header = () => {
   return (
     <header
       className={`sticky top-0 z-50 pt-3 md:pt-4 transition-colors duration-300 ${
-        isScrolled ? "bg-primary/85 pb-3" : ""
+        isScrolled
+          ? "bg-primary/85 pb-3"
+          : isMobileMenuOpen
+          ? "bg-primary pb-0"
+          : ""
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6 md:px-10">
@@ -46,7 +50,7 @@ const Header = () => {
           <NavLink
             to="/ciscenje"
             className={({ isActive }) =>
-              `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-lg ${
+              `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-xl ${
                 isActive ? "text-secondary active" : ""
               }`
             }
@@ -56,7 +60,7 @@ const Header = () => {
           <NavLink
             to="/vzdrzevanje"
             className={({ isActive }) =>
-              `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-lg ${
+              `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-xl ${
                 isActive ? "text-secondary active" : ""
               }`
             }
@@ -66,7 +70,7 @@ const Header = () => {
           <NavLink
             to="/o-nas"
             className={({ isActive }) =>
-              `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-lg ${
+              `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-xl ${
                 isActive ? "text-secondary active" : ""
               }`
             }
@@ -76,7 +80,7 @@ const Header = () => {
           <NavLink
             to="/kontakt"
             className={({ isActive }) =>
-              `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-lg ${
+              `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-xl ${
                 isActive ? "text-secondary active" : ""
               }`
             }
@@ -87,7 +91,10 @@ const Header = () => {
 
         {/* Call-to-Action Button - Desktop Only */}
         <div className="hidden md:block">
-          <C2AButton to="/#contact" btnText="Želim ponudbo" />
+          <C2AButton
+            to="/#contact"
+            btnText="Želim ponudbo"
+          />
         </div>
 
         {/* Mobile Menu Button */}
@@ -125,7 +132,7 @@ const Header = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-primary backdrop-blur-sm">
-          <nav className="container mx-auto px-6 py-4 flex flex-col space-y-4">
+          <nav className="container mx-auto px-6 py-0 flex flex-col space-y-4 pt-4 pb-4">
             <NavLink
               to="/ciscenje"
               className={({ isActive }) =>
@@ -146,7 +153,7 @@ const Header = () => {
               }
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Vzdrževanje
+              Vzdrževanje objektov
             </NavLink>
             <NavLink
               to="/o-nas"

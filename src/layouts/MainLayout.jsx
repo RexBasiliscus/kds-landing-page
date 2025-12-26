@@ -1,6 +1,5 @@
 import { Outlet } from "react-router";
 import Header from "../components/Header";
-import Hero from "../components/Hero";
 import Form from "../components/Form";
 import Footer from "../components/Footer";
 import { testimonialsData } from "../data/testimonialsData";
@@ -10,7 +9,6 @@ const MainLayout = () => {
   return (
     <>
       <Header />
-      <Hero />
       {/* Page-specific content will be rendered here via nested routes */}
       <Outlet />
       {/* Shared sections */}

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 import { scrollToHash } from "../utils/scrollToHash";
+import Hero from "../components/Hero";
 import Cards from "../components/Cards";
 import WhyChooseUs from "../components/WhyChooseUs";
 import EnvironmentSection from "../components/EnvironmentSection";
@@ -17,6 +18,7 @@ const Home = () => {
 
   return (
     <>
+      <Hero />
       <Cards cardsData={[cardsData[0], cardsData[1]]} />
       <WhyChooseUs />
       {/* Environment responsibility section */}

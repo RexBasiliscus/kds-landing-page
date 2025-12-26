@@ -3,7 +3,7 @@ import bckImg from "../assets/bckg-fix.jpg";
 const Hero = () => {
   return (
     <section
-      className="relative min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh] -mt-16 pt-16 overflow-hidden"
+      className="relative min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] lg:min-h-[70vh] -mt-16 pt-16 overflow-hidden"
       style={{
         /* tuned multi-stop gradient to better match the provided design */
         backgroundImage: `linear-gradient(180deg, rgba(6,144,128,0.85) 0%, rgba(6,144,128,0.65) 30%, rgba(7,151,137,0.35) 60%, rgba(7,151,137,0) 100%), url(${bckImg})`,
@@ -22,7 +22,7 @@ const Hero = () => {
                 <br />
                 naš <span className="text-secondary">ponos.</span>
               </h1>
-              <p className="text-lg md:text-xl font-primary mt-4">
+              <p className="text-lg md:text-xl font-primary font-medium mt-4">
                 zavezujemo se k zagotavljanju vrhunskih storitev vzdrževanja in
                 čiščenja objektov
               </p>

@@ -70,7 +70,7 @@ const TestimonialsCarousel = ({ testimonials = [] }) => {
             {itemsToShow.map((t, i) => (
               <div
                 key={`${index}-${i}`}
-                className="bg-white rounded-2xl shadow-lg p-4 sm:p-5 md:p-6 lg:p-8 flex-none w-[140px] sm:w-[200px] md:w-[260px] lg:w-[340px] xl:w-[380px]"
+                className="bg-white rounded-2xl border-t-4 border-primary shadow-lg p-4 sm:p-5 md:p-6 lg:p-8 flex-none w-[140px] sm:w-[200px] md:w-[260px] lg:w-[340px] xl:w-[380px] max-h-[230px] sm:max-h-[200px] md:max-h-[350px] lg:max-h-[400px] overflow-y-auto"
               >
                 <h4 className="text-sm sm:text-base lg:text-lg font-bold text-primary font-highlight mb-2 sm:mb-3 lg:mb-4">
                   {t.company}
