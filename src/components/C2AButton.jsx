@@ -10,7 +10,7 @@ const C2AButton = ({
   disabled = false,
 }) => {
   const classes =
-    "bg-accent text-white px-4 py-2 rounded-lg font-primary font-medium text-sm hover:bg-orange-600 transition-colors inline-block " +
+    "bg-accent text-white px-4 py-2 rounded-lg font-primary font-medium text-base hover:bg-orange-600 transition-colors inline-block " +
     className;
 
   if (to) {

@@ -19,7 +19,7 @@ const ClientsSection = ({ logos = [] }) => {
 
         {/* Right logos grid */}
         <div className="flex-1 w-full">
-          <div className="flex flex-wrap items-center gap-x-10 gap-y-8 md:justify-between">
+          <div className="flex flex-wrap items-center justify-center md:justify-between gap-x-10 gap-y-8">
             {logos.map((logo, i) => (
               <div
                 key={i}

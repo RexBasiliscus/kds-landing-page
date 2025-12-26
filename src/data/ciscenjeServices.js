@@ -7,12 +7,12 @@ export const ciscenjeServices = [
   {
     title: "Globoko čiščenje",
     description:
-      "Temeljito čiščenje vseh površin, vključno s podrobnostmi in težko dostopnimi mesti",
+      "Temeljito čiščenje vseh površin, vključno s podrobnostmi in težko dostopnimi mesti.",
   },
   {
     title: "Čiščenje oken",
     description:
-      "Profesionalno čiščenje vseh vrst oken in steklenih površin na stavbi",
+      "Profesionalno čiščenje vseh vrst oken in steklenih površin na stavbi.",
   },
   {
     title: "Čiščenje stopnišč in skupnih prostorov večstanovanjskih stavb",
@@ -27,6 +27,6 @@ export const ciscenjeServices = [
   {
     title: "Čiščenje vzdrževanje",
     description:
-      "Redne vzdrževalne storitve čiščenja prilagojene vašim posebnim potrebam",
+      "Redne vzdrževalne storitve čiščenja prilagojene vašim posebnim potrebam.",
   },
 ];

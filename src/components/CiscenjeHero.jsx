@@ -14,27 +14,27 @@ const CiscenjeHero = () => {
     >
       {/* Content Container */}
       <div className="absolute inset-0 flex items-end md:items-end">
-        <div className="container mx-auto px-6 w-full pb-8 md:pb-0 sm:pb-0">
-          <div className="flex flex-row items-start md:gap-12 sm:gap-8">
+        <div className="container mx-auto px-6 w-full pb-0">
+          <div className="flex flex-row items-start gap-4 md:gap-12">
             {/* Left Side - Image */}
             <div className="w-1/2 md:w-1/2 flex justify-center items-end">
-              <div className="relative z-10 -mb-20 md:-mb-20 sm:-mb-10">
+              <div className="relative z-10 -mb-12 md:-mb-20 lg:-mb-32">
                 <img
                   src={heroImage}
                   alt="Čiščenje objektov"
-                  className="sm:w-[16rem] sm:h-[20rem] md:w-[20rem] md:h-[28rem] lg:w-[30rem] lg:h-[36rem] object-cover rounded-3xl shadow-2xl"
+                  className="w-40 h-52 sm:w-[16rem] sm:h-[20rem] md:w-[20rem] md:h-[28rem] lg:w-[30rem] lg:h-[36rem] object-cover rounded-3xl shadow-2xl"
                 />
               </div>
             </div>
 
             {/* Right Side - Text Content */}
-            <div className="w-1/2 md:w-1/2 flex items-start pt-8 md:pt-8 sm:pt-8">
+            <div className="w-1/2 md:w-1/2 flex items-start">
               <div className="text-left text-white font-semibold">
-                <h1 className="hero-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-highlight font-bold">
+                <h1 className="hero-heading text-base sm:text-2xl md:text-5xl lg:text-6xl font-highlight font-bold">
                   <span className="text-secondary">Čiščenje </span>
                   objektov
                 </h1>
-                <p className="sm:text-base md:text-xl lg:text-3xl font-primary font-medium lg:pt-16 md:pt-8 sm:pt-4">
+                <p className="text-[11px] sm:text-base md:text-xl lg:text-3xl font-primary font-medium mt-2 md:mt-8 lg:mt-16">
                   V KD Storitve nudimo{" "}
                   <span className="text-secondary">
                     profesionalne čistilne storitve za vse tipe objektov

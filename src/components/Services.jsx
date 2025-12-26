@@ -1,7 +1,7 @@
 const Services = ({ services = [] }) => {
   return (
     <section className="bg-white relative">
-      <div className="max-w-7xl mx-auto px-6 py-16 pt-40">
+      <div className="max-w-7xl mx-auto px-6 py-16 sm:pt-24 md:pt-32 lg:pt-48">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
           <span className="text-secondary">Celovit nabor</span>{" "}
           <span className="text-primary">storitev čiščenja</span>
@@ -11,7 +11,7 @@ const Services = ({ services = [] }) => {
           {services.map((service, i) => (
             <div
               key={i}
-              className="bg-white rounded-lg shadow-md p-6 md:p-8 w-[300px] h-[380px] hover:shadow-lg transition-shadow border-t-4 border-primary flex flex-col"
+              className="bg-white rounded-lg shadow-md p-6 md:p-8 sm:h-[285px] md:h-[380px] lg:h-[380px] hover:shadow-lg transition-shadow border-t-4 border-primary flex flex-col"
             >
               <p className="text-3xl md:text-4xl font-bold text-primary mb-4">
                 {String(i + 1).padStart(2, "0")}

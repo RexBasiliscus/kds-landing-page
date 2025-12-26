@@ -1,5 +1,5 @@
 import vzdrzevanjeImg from "../assets/vzdrzevanje2.svg";
-import ciscenjeImg from "../assets/ciscenje2.svg";
+import ciscenjeImg from "../assets/ciscenje.png";
 import zaupanjeImg from "../assets/zaupanje.png";
 import tarcaImg from "../assets/tarca.png";
 import sestavljankaImg from "../assets/sestavljanka.png";
