@@ -1,4 +1,4 @@
-import CiscenjeHero from "../components/CiscenjeHero";
+import SharedHero from "../components/SharedHero";
 import Services from "../components/Services";
 import CommentsSection from "../components/CommentsSection";
 import { ciscenjeServices } from "../data/ciscenjeServices";
@@ -8,7 +8,7 @@ import WhyChooseUs from "../components/WhyChooseUs";
 const Ciscenje = () => {
   return (
     <>
-      <CiscenjeHero />
+      <SharedHero />
       <Services services={ciscenjeServices} />
       <CommentsSection comments={testimonialsData} />
       <WhyChooseUs className="pb-24" />
