@@ -1,10 +1,19 @@
+import { useLocation } from "react-router";
+
 const Services = ({ services = [] }) => {
+  const location = useLocation();
+
+  const serviceTypeText =
+    location.pathname === "/vzdrzevanje"
+      ? "storitev vzdrževanja"
+      : "storitev čiščenja";
+
   return (
     <section className="bg-white relative">
       <div className="max-w-7xl mx-auto px-6 py-16 sm:pt-24 md:pt-32 lg:pt-48">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
           <span className="text-secondary">Celovit nabor</span>{" "}
-          <span className="text-primary">storitev čiščenja</span>
+          <span className="text-primary">{serviceTypeText}</span>
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
