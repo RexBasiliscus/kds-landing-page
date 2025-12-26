@@ -29,9 +29,9 @@ const CommentsSection = ({ comments = [] }) => {
   }, [index, comments]);
 
   return (
-    <section className="bg-background py-16">
+    <section className="bg-background py-10">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center gap-12 min-h-[400px] md:min-h-[500px]">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-12 min-h-[500px] md:min-h-[500px]">
           {/* Left Side - Comment Text */}
           <div className="w-full md:w-1/2 flex flex-col justify-center">
             <div
@@ -44,12 +44,12 @@ const CommentsSection = ({ comments = [] }) => {
                   <img
                     src={narekovaji}
                     alt="Quote"
-                    className="h-16 md:h-20 mb-6"
+                    className="h-10 sm:h-16 md:h-20 mb-4 sm:mb-6"
                   />
-                  <p className="lg:text-2xl md:text-xl sm:text-xl text-black leading-relaxed mb-8 font-serif italic">
+                  <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-black leading-relaxed mb-4 sm:mb-8 font-serif italic">
                     {currentComment.text}
                   </p>
-                  <p className="text-center md:text-left text-xl font-bold text-primary">
+                  <p className="text-center md:text-left text-base sm:text-xl font-bold text-primary">
                     {currentComment.company}
                   </p>
                 </div>
@@ -58,7 +58,7 @@ const CommentsSection = ({ comments = [] }) => {
           </div>
 
           {/* Right Side - Image */}
-          <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+          <div className="w-full md:w-1/2 flex justify-center">
             <div className="relative">
               <img
                 src={commentsImg}

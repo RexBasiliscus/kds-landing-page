@@ -20,12 +20,14 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 pt-3 md:pt-4 transition-colors duration-300 ${
+      className={`sticky top-0 z-50 pt-3 md:pt-4 ${
+        isMobileMenuOpen ? "duration-0" : "duration-300"
+      } transition-all ${
         isScrolled
-          ? "bg-primary/85 pb-3"
+          ? "bg-primary pb-3"
           : isMobileMenuOpen
-          ? "bg-primary pb-0"
-          : ""
+          ? "bg-primary pb-2"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6 md:px-10">
