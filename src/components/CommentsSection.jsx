@@ -1,10 +1,17 @@
 import { useState, useEffect, useMemo } from "react";
-import commentsImg from "../assets/commentsImg.png";
+import commentsImgCiscenje from "../assets/commentsImg.png";
+import commentsImgVzdrzevanje from "../assets/comments2img.png";
 import narekovaji from "../assets/narekovaji.svg";
+import { useLocation } from "react-router";
 
 const CommentsSection = ({ comments = [] }) => {
   const [index, setIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
+  const location = useLocation();
+  const commentsImg =
+    location.pathname === "/ciscenje"
+      ? commentsImgCiscenje
+      : commentsImgVzdrzevanje;
 
   // Auto-advance every 10s with a smooth crossfade
   useEffect(() => {
