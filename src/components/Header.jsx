@@ -2,10 +2,16 @@ import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router";
 import headerLogo from "../assets/header-logo.svg";
 import C2AButton from "./C2AButton";
+import { scrollToTop } from "../utils/scrollToTop";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleNavClick = () => {
+    scrollToTop({ behavior: "auto" });
+    setIsMobileMenuOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +32,7 @@ const Header = () => {
         isScrolled
           ? "bg-primary pb-3"
           : isMobileMenuOpen
-          ? "bg-primary pb-2"
+          ? "bg-primary pb-3"
           : "bg-transparent"
       }`}
     >
@@ -51,6 +57,7 @@ const Header = () => {
         <nav className="hidden md:flex space-x-8">
           <NavLink
             to="/ciscenje"
+            onClick={handleNavClick}
             className={({ isActive }) =>
               `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-xl ${
                 isActive ? "text-secondary active" : ""
@@ -61,6 +68,7 @@ const Header = () => {
           </NavLink>
           <NavLink
             to="/vzdrzevanje"
+            onClick={handleNavClick}
             className={({ isActive }) =>
               `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-xl ${
                 isActive ? "text-secondary active" : ""
@@ -71,6 +79,7 @@ const Header = () => {
           </NavLink>
           <NavLink
             to="/o-nas"
+            onClick={handleNavClick}
             className={({ isActive }) =>
               `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-xl ${
                 isActive ? "text-secondary active" : ""
@@ -81,6 +90,7 @@ const Header = () => {
           </NavLink>
           <NavLink
             to="/kontakt"
+            onClick={handleNavClick}
             className={({ isActive }) =>
               `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-xl ${
                 isActive ? "text-secondary active" : ""
@@ -137,45 +147,45 @@ const Header = () => {
           <nav className="container mx-auto px-6 py-0 flex flex-col space-y-4 pt-4 pb-4">
             <NavLink
               to="/ciscenje"
+              onClick={handleNavClick}
               className={({ isActive }) =>
                 `nav-link text-white font-primary font-medium py-2 hover:text-secondary transition ${
                   isActive ? "text-secondary active" : ""
                 }`
               }
-              onClick={() => setIsMobileMenuOpen(false)}
             >
               Čiščenje objektov
             </NavLink>
             <NavLink
               to="/vzdrzevanje"
+              onClick={handleNavClick}
               className={({ isActive }) =>
                 `text-white font-primary font-medium py-2 hover:text-secondary transition ${
                   isActive ? "text-secondary" : ""
                 }`
               }
-              onClick={() => setIsMobileMenuOpen(false)}
             >
               Vzdrževanje objektov
             </NavLink>
             <NavLink
               to="/o-nas"
+              onClick={handleNavClick}
               className={({ isActive }) =>
                 `text-white font-primary font-medium py-2 hover:text-secondary transition ${
                   isActive ? "text-secondary" : ""
                 }`
               }
-              onClick={() => setIsMobileMenuOpen(false)}
             >
               O nas
             </NavLink>
             <NavLink
               to="/kontakt"
+              onClick={handleNavClick}
               className={({ isActive }) =>
                 `text-white font-primary font-medium py-2 hover:text-secondary transition ${
                   isActive ? "text-secondary" : ""
                 }`
               }
-              onClick={() => setIsMobileMenuOpen(false)}
             >
               Kontakt
             </NavLink>

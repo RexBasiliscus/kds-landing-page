@@ -2,7 +2,7 @@ import Features from "./Features";
 import { cardsData } from "../data/cardsData";
 import C2AButton from "./C2AButton";
 
-const WhyChooseUs = ({ className = "" }) => {
+const WhyChooseUs = ({ className = "", hideButton = false }) => {
   return (
     <section className={className}>
       {/* Section header below cards */}
@@ -18,13 +18,15 @@ const WhyChooseUs = ({ className = "" }) => {
 
       <Features cardsData={[cardsData[2], cardsData[3], cardsData[4]]} />
 
-      <div className="flex justify-center mt-10 mb-10">
-        <C2AButton
-          to="/o-nas"
-          btnText="Poizvej več o nas"
-          className="bg-orange-500 hover:bg-orange-600 text-white rounded-lg px-4 pt-2 text-base md:text-lg font-semibold w-60 md:w-60 text-center"
-        />
-      </div>
+      {!hideButton && (
+        <div className="flex justify-center mt-10 mb-10">
+          <C2AButton
+            to="/o-nas"
+            btnText="Poizvej več o nas"
+            className="bg-orange-500 hover:bg-orange-600 text-white rounded-lg px-4 pt-2 text-base md:text-lg font-semibold w-60 md:w-60 text-center"
+          />
+        </div>
+      )}
     </section>
   );
 };

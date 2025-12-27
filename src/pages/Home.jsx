@@ -6,8 +6,10 @@ import Cards from "../components/Cards";
 import WhyChooseUs from "../components/WhyChooseUs";
 import EnvironmentSection from "../components/EnvironmentSection";
 import ClientsSection from "../components/ClientsSection";
+import TestimonialsCarousel from "../components/TestimonialsCarousel";
 import { clientLogos } from "../data/clientLogos";
 import { cardsData } from "../data/cardsData";
+import { testimonialsData } from "../data/testimonialsData";
 
 const Home = () => {
   const location = useLocation();
@@ -18,13 +20,18 @@ const Home = () => {
 
   return (
     <>
-      <Hero />
+      <Hero
+        heading="Vaša urejenost,"
+        subheading="naš ponos."
+        description="zavezujemo se k zagotavljanju vrhunskih storitev vzdrževanja in čiščenja objektov"
+      />
       <Cards cardsData={[cardsData[0], cardsData[1]]} />
       <WhyChooseUs />
       {/* Environment responsibility section */}
       <EnvironmentSection />
       {/* Clients / Logos section */}
       <ClientsSection logos={clientLogos} />
+      <TestimonialsCarousel testimonials={testimonialsData} />
     </>
   );
 };
