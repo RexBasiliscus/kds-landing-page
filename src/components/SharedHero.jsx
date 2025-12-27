@@ -45,18 +45,18 @@ const SharedHero = () => {
         <div className="container mx-auto px-6 w-full pb-2 md:pb-6 lg:pb-8">
           <div className="flex flex-row items-start gap-4 md:gap-12">
             {/* Left Side - Image */}
-            <div className="w-2/5 md:w-1/2  flex justify-center items-end">
+            <div className="w-1/2  flex justify-center items-end">
               <div className="relative z-10 -mb-12 md:-mb-20 lg:-mb-24">
                 <img
                   src={config.heroImage}
                   alt={config.altText}
-                  className="w-48 h-52 sm:w-[14rem] sm:h-[18rem] md:w-[20rem] md:h-[28rem] lg:w-[22rem] lg:h-[30rem] object-cover rounded-3xl shadow-2xl"
+                  className="w-56 h-56 sm:w-[14rem] sm:h-[18rem] md:w-[20rem] md:h-[28rem] lg:w-[24rem] lg:h-[34rem] object-cover rounded-3xl shadow-2xl"
                 />
               </div>
             </div>
 
             {/* Right Side - Text Content */}
-            <div className="w-3/5 md:w-1/2 flex items-start">
+            <div className="w-1/2 flex items-start">
               <div className=" text-white">
                 <h1 className="text-base sm:text-base md:text-5xl lg:text-5xl font-highlight font-bold">
                   <span className="text-secondary">{config.title} </span>
