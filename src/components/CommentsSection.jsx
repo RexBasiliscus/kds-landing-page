@@ -52,6 +52,8 @@ const CommentsSection = ({ comments = [] }) => {
                     src={narekovaji}
                     alt="Quote"
                     className="h-10 sm:h-16 md:h-20 mb-4 sm:mb-6"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-black leading-relaxed mb-4 sm:mb-8 font-serif italic">
                     {currentComment.text}
@@ -71,6 +73,8 @@ const CommentsSection = ({ comments = [] }) => {
                 src={commentsImg}
                 alt="Customer testimonial"
                 className="w-full h-full object-cover rounded-3xl shadow-lg"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

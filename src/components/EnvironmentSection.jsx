@@ -11,6 +11,8 @@ const EnvironmentSection = () => {
             src={plantImg}
             alt="Zelena rastlina"
             className="w-full max-w-md md:max-w-lg object-contain drop-shadow-md"
+            loading="lazy"
+            decoding="async"
           />
         </div>
 

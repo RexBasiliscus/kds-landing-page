@@ -51,6 +51,8 @@ const SharedHero = () => {
                   src={config.heroImage}
                   alt={config.altText}
                   className="w-56 h-56 sm:w-[14rem] sm:h-[18rem] md:w-[20rem] md:h-[28rem] lg:w-[24rem] lg:h-[34rem] object-cover rounded-3xl shadow-2xl"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
