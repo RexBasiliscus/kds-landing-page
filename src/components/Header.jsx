@@ -42,8 +42,8 @@ const Header = () => {
           <Link
             to="/"
             onClick={() => setIsMobileMenuOpen(false)}
-            aria-label="Home"
-            title="Home"
+            aria-label="Domov"
+            title="Domov"
           >
             <img
               src={headerLogo}
@@ -54,12 +54,23 @@ const Header = () => {
         </div>
 
         {/* Navigation */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden md:flex space-x-4 lg:space-x-8">
+          <NavLink
+            to="/"
+            onClick={handleNavClick}
+            className={({ isActive }) =>
+              `nav-link text-white font-primary font-medium hover:text-secondary text-sm lg:text-xl ${
+                isActive ? "text-secondary active" : ""
+              }`
+            }
+          >
+            Domov
+          </NavLink>
           <NavLink
             to="/ciscenje"
             onClick={handleNavClick}
             className={({ isActive }) =>
-              `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-xl ${
+              `nav-link text-white font-primary font-medium hover:text-secondary text-sm lg:text-xl ${
                 isActive ? "text-secondary active" : ""
               }`
             }
@@ -70,7 +81,7 @@ const Header = () => {
             to="/vzdrzevanje"
             onClick={handleNavClick}
             className={({ isActive }) =>
-              `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-xl ${
+              `nav-link text-white font-primary font-medium hover:text-secondary text-sm lg:text-xl ${
                 isActive ? "text-secondary active" : ""
               }`
             }
@@ -81,7 +92,7 @@ const Header = () => {
             to="/o-nas"
             onClick={handleNavClick}
             className={({ isActive }) =>
-              `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-xl ${
+              `nav-link text-white font-primary font-medium hover:text-secondary text-sm lg:text-xl ${
                 isActive ? "text-secondary active" : ""
               }`
             }
@@ -92,7 +103,7 @@ const Header = () => {
             to="/kontakt"
             onClick={handleNavClick}
             className={({ isActive }) =>
-              `nav-link text-white font-primary font-medium hover:text-secondary text-base lg:text-xl ${
+              `nav-link text-white font-primary font-medium hover:text-secondary text-sm lg:text-xl ${
                 isActive ? "text-secondary active" : ""
               }`
             }
@@ -145,6 +156,17 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-primary backdrop-blur-sm">
           <nav className="container mx-auto px-6 py-0 flex flex-col space-y-4 pt-4 pb-4">
+            <NavLink
+              to="/"
+              onClick={handleNavClick}
+              className={({ isActive }) =>
+                `nav-link text-white font-primary font-medium py-2 hover:text-secondary transition ${
+                  isActive ? "text-secondary active" : ""
+                }`
+              }
+            >
+              Domov
+            </NavLink>
             <NavLink
               to="/ciscenje"
               onClick={handleNavClick}

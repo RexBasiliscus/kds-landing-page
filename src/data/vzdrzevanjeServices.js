@@ -1,32 +1,32 @@
 export const vzdrzevanjeServices = [
   {
-    title: "Redna tehnična vzdrževanja",
+    title: "Redna vzdrževalna dela",
     description:
-      "Periodične preglede in vzdrževalne intervencije za zagotovitev nemotenega delovanja vseh sistemov v objektu.",
+      "Periodični in redni pregledi in vzdrževalne intervencije za zagotovitev nemotenega delovanja vseh sistemov v objektu.",
   },
   {
-    title: "Popravila in servis opreme",
+    title: "Urejanje, vzdrževanje in čiščenje zelenih površin in okolice",
     description:
-      "Hitro in strokovnjaško odpravljanje napak ter servis različne opreme in inštalacij.",
+      "Vzdrževanje vrtov, travnikov in drugih zelenih površin za estetski in funkcionalni videz okolice.",
   },
   {
-    title: "Vzdrževanje ogrevanja in hlajenja",
+    title: "Upravljanje večstanovanjskih hiš in sosesk",
     description:
-      "Nadzor in vzdrževanje sistemov ogrevanja in klimatizacije za optimalno temperaturo in kvaliteto zraka.",
+      "Celovito upravljanje in vzdrževanje skupnih prostorov ter infrastrukture v večstanovanjskih objektih.",
   },
   {
-    title: "Vzdrževanje sanitarije in vodovoda",
+    title: "Upravljanje poslovnih stavb",
     description:
-      "Redna kontrola in vzdrževanje vodovoda, kanalizacije in sanitarnih inštalacij za brezhibno delovanje.",
+      "Vzdrževanje in upravljanje poslovnih prostorov za zagotavljanje optimalnih delovnih pogojev.",
   },
   {
-    title: "Prevencija in zaščita",
+    title: "Selitev pohištva in opreme",
     description:
-      "Preventivne ukrepe za zaščito objekta pred škodami, vključno s tesnjenjima, zaščito pred vlagom in drugo.",
+      "Organizacija in izvedba selitvenih storitev za podjetja in posameznike.",
   },
   {
-    title: "Nujni intervencije",
+    title: "Odvoz dokumentacije na uničenje",
     description:
-      "Hitri odgovor na nujne situacije in probleme, ki se pojavijo zunaj rednega delovnega časa.",
+      "Organizacija in izvedba storitev za varen in zanesljiv odvoz ter uničenje dokumentacije.",
   },
 ];

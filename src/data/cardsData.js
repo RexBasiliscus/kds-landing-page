@@ -9,32 +9,32 @@ export const cardsData = [
     title: "Vzdrževanje objektov",
     image: vzdrzevanjeImg,
     description:
-      "zavezujemo se k zagotavljanju vrhunskh storitev vzdrževanja in čiščenja objektov",
+      "redno in zanesljivo tehnično vzdrževanje stanovanjskih, poslovnih in industrijskih objektov",
     linkText: "Poizvej več",
   },
   {
     title: "Čiščenje objektov",
     image: ciscenjeImg,
     description:
-      "zavezujemo se k zagotavljanju vrhunskh storitev vzdrževanja in čiščenja objektov",
+      "profesionalno čiščenje pisarn, skupnih prostorov, stopnišč in objektov po meri naročnika",
     linkText: "Poizvej več",
   },
   {
     title: "Zaupanja vredni in zanesljivi",
     image: zaupanjeImg,
     description:
-      "Naša ekipa je skrbno izbrana in usposobljena, da zagotavlja najvišjo raven storitev",
+      "Zanesljiv partner z izkušnjami, ki se drži dogovorov in skrbi za vaše objekte",
   },
   {
     title: "Natančne in kakovostne storitve",
     image: tarcaImg,
     description:
-      "Naša ekipa je skrbno izbrana in usposobljena, da zagotavlja najvišjo raven storitev",
+      "Natančno izvedene storitve z nadzorom kakovosti za brezhiben rezultat",
   },
   {
     title: "Prilagodimo se vašim potrebam",
     image: sestavljankaImg,
     description:
-      "Naša ekipa je skrbno izbrana in usposobljena, da zagotavlja najvišjo raven storitev.",
+      "Storitev prilagodimo vašim urnikom in željam, z rešitvami po meri",
   },
 ];

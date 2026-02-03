@@ -1,32 +1,37 @@
 export const ciscenjeServices = [
   {
-    title: "Redno čiščenje poslovnih prostorov in pisarn",
+    title: "Redno čiščenje poslovnih prostorov",
     description:
       "Z rednim čiščenjem zagotavljamo urejeno in prijetno delovno okolje, pri čemer poskrbimo za tla, pohištvo, sanitarije in skupne prostore.",
   },
   {
-    title: "Globoko čiščenje",
+    title: "Dnevno in generalno čiščenje",
     description:
-      "Temeljito čiščenje vseh površin, vključno s podrobnostmi in težko dostopnimi mesti.",
+      "Celovito čiščenje prostorov, ki vključuje pranje tal, brisanje površin, čiščenje sanitarij in odstranjevanje odpadkov.",
   },
   {
-    title: "Čiščenje oken",
+    title: "Čiščenje vzgojno-izobraževalnih ustanov",
     description:
-      "Profesionalno čiščenje vseh vrst oken in steklenih površin na stavbi.",
+      "Skrbimo za čistočo in higieno v šolah, vrtcih in drugih izobraževalnih ustanovah, da zagotovimo varno in zdravo okolje za otroke in osebje.",
   },
   {
-    title: "Čiščenje stopnišč in skupnih prostorov večstanovanjskih stavb",
+    title: "Čiščenje zdravstvenih ustanov",
     description:
-      "Skrbimo, da so skupni prostori vedno urejeni, varni in prijetni, vključno s tlemi, ograjami, svetili in poštnimi nabiralniki.",
+      "Specializirane storitve čiščenja za bolnišnice, klinike in zdravstvene domove, ki zagotavljajo visoke standarde higiene in preprečujejo širjenje okužb.",
   },
   {
-    title: "Redno čiščenje poslovnih prostorov in pisarn",
+    title: "Čiščenje industrijskih obratov in okolice",
     description:
-      "Z rednim čiščenjem zagotavljamo urejeno in prijetno delovno okolje, pri čemer poskrbimo za tla, pohištvo, sanitarije in skupne prostore.",
+      "Profesionalno čiščenje industrijskih prostorov, skladišč in proizvodnih obratov, vključno z odstranjevanjem industrijskih odpadkov in vzdrževanjem čistoče okolice.",
   },
   {
-    title: "Čiščenje vzdrževanje",
+    title: "Čiščenje avtomobilskih salonov in delavnic",
     description:
-      "Redne vzdrževalne storitve čiščenja prilagojene vašim posebnim potrebam.",
+      "Vzdržujemo čistočo in urejenost avtomobilskih salonov ter delavnic, kar prispeva k boljši predstavitvi vozil in profesionalnemu videzu vašega podjetja.",
+  },
+  {
+    title: "Čiščenje trgovskih centrov in športnih objektov",
+    description:
+      "Vzdržujemo čistočo in urejenost trgovskih centrov ter športnih objektov, kar prispeva k boljši predstavitvi in varnosti za obiskovalce ter uporabnike.",
   },
 ];

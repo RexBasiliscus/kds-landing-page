@@ -23,7 +23,7 @@ const Home = () => {
       <Hero
         heading="Vaša urejenost,"
         subheading="naš ponos."
-        description="zavezujemo se k zagotavljanju vrhunskih storitev vzdrževanja in čiščenja objektov"
+        description="zanesljivo vzdrževanje in profesionalno čiščenje objektov po vsej Sloveniji."
       />
       <Cards cardsData={[cardsData[0], cardsData[1]]} />
       <WhyChooseUs />

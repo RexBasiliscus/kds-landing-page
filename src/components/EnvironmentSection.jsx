@@ -26,12 +26,6 @@ const EnvironmentSection = () => {
             okoljski odtis našega delovanja, hkrati pa zagotoviti najvišjo raven
             čistoče.
           </p>
-          <a
-            href="#request-quote"
-            className="text-primary font-semibold hover:underline inline-flex items-center gap-2"
-          >
-            Poizvej več <span aria-hidden>→</span>
-          </a>
         </div>
       </div>
     </section>
