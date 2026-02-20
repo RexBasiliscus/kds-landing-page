@@ -26,7 +26,7 @@ const Form = () => {
       nameInput,
       emailInput,
       titleInput,
-      messageInput
+      messageInput,
     );
     if (validationErrors.length > 0) {
       setLoading(false);
@@ -145,18 +145,6 @@ const Form = () => {
               {message}
             </p>
           )}
-
-          {/* Terms text */}
-          <p className="text-center text-sm text-black font-medium -mt-2">
-            S pošiljanjem se strinjate s{" "}
-            <a
-              href="#terms"
-              className="text-primary"
-            >
-              splošnimi pogoji
-            </a>
-            .
-          </p>
         </form>
       </div>
     </section>

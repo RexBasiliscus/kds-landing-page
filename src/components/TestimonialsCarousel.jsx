@@ -8,7 +8,7 @@ const TestimonialsCarousel = ({ testimonials = [] }) => {
 
   // Determine visible cards by screen size: 3 on lg+, else 2
   useEffect(() => {
-    const mq = window.matchMedia("(min-width: 1024px)"); // Tailwind lg breakpoint
+    const mq = window.matchMedia("(min-width: 1024px)");
     const update = () => setVisibleCount(mq.matches ? 3 : 2);
     update();
     mq.addEventListener
@@ -72,9 +72,6 @@ const TestimonialsCarousel = ({ testimonials = [] }) => {
                 key={`${index}-${i}`}
                 className="bg-white rounded-2xl border-t-4 border-primary shadow-lg p-4 sm:p-5 md:p-6 lg:p-8 flex-none w-[140px] sm:w-[200px] md:w-[260px] lg:w-[340px] xl:w-[380px] max-h-[230px] sm:max-h-[200px] md:max-h-[350px] lg:max-h-[400px] overflow-y-auto"
               >
-                <h4 className="text-sm sm:text-base lg:text-lg font-bold text-primary font-highlight mb-2 sm:mb-3 lg:mb-4">
-                  {t.company}
-                </h4>
                 <p className="text-xs sm:text-sm lg:text-base text-black font-primary leading-tight sm:leading-relaxed">
                   "{t.text}"
                 </p>

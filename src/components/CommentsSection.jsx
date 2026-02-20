@@ -58,9 +58,6 @@ const CommentsSection = ({ comments = [] }) => {
                   <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-black leading-relaxed mb-4 sm:mb-8 font-serif italic">
                     {currentComment.text}
                   </p>
-                  <p className="text-center md:text-left text-base sm:text-xl font-bold text-primary">
-                    {currentComment.company}
-                  </p>
                 </div>
               )}
             </div>
