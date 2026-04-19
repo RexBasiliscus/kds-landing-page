@@ -1,7 +1,7 @@
 export const aboutUsData = [
   {
     heading: "Naša zgodba",
-    text: "Zgodba KD storitev se je začela leta 2018 z željo ponuditi zanesljive in kakovostne storitve čiščenja ter vzdrževanja objektov. Od samega začetka nas vodijo natančnost, odgovornost in spoštovanje dogovorov. Z vztrajnim delom in osebnim pristopom smo si pridobili zaupanje strank, ki se k nam vračajo zaradi vidnih rezultatov in zanesljivosti. Danes ostajamo zvesti istemu cilju – zagotavljati čistočo in urejenost, ki pusti dober vtis.",
+    text: "Zgodba KD storitev se je začela leta 2021 z željo ponuditi zanesljive in kakovostne storitve čiščenja ter vzdrževanja objektov. Od samega začetka nas vodijo natančnost, odgovornost in spoštovanje dogovorov. Z vztrajnim delom in osebnim pristopom smo si pridobili zaupanje strank, ki se k nam vračajo zaradi vidnih rezultatov in zanesljivosti. Danes ostajamo zvesti istemu cilju – zagotavljati čistočo in urejenost, ki pusti dober vtis.",
   },
   {
     heading: "Naše poslanstvo",
