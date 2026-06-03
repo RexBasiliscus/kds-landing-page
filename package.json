@@ -6,14 +6,18 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:deploy": "npm run build && npm run deploy",
+    "deploy": "node deploy.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "dotenv": "^16.4.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router": "^7.10.1"
+    "react-router": "^7.10.1",
+    "ssh2": "^1.15.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

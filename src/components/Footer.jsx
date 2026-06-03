@@ -2,6 +2,8 @@ import React from "react";
 import logo from "../assets/footer-logo.svg";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-background py-6 md:py-8 lg:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -17,7 +19,7 @@ const Footer = () => {
 
           {/* Copyright text */}
           <p className="text-xs sm:text-sm text-primary font-medium text-center order-3 md:order-2 md:flex-1">
-            Copyright © 2025. KD storitve d.o.o. Vse pravice pridržane.
+            Copyright © {currentYear}. KD storitve d.o.o. Vse pravice pridržane.
           </p>
         </div>
       </div>
