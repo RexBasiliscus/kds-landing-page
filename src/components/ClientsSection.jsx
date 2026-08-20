@@ -19,16 +19,16 @@ const ClientsSection = ({ logos = [] }) => {
 
         {/* Right logos grid */}
         <div className="flex-1 w-full">
-          <div className="flex flex-wrap items-center justify-center md:justify-between gap-x-10 gap-y-8">
+          <div className="flex flex-wrap justify-center gap-y-5">
             {logos.map((logo, i) => (
               <div
                 key={i}
-                className="h-12 md:h-14 flex items-center"
+                className="w-1/2 sm:w-1/3 h-16 md:h-20 px-3 flex items-center justify-center"
               >
                 <img
                   src={logo.src}
                   alt={logo.alt || `client-${i}`}
-                  className="h-full w-auto object-contain opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition"
+                  className="max-h-full max-w-full object-contain opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition"
                 />
               </div>
             ))}
