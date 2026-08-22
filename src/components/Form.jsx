@@ -1,5 +1,6 @@
 import C2AButton from "./C2AButton";
 import { useRef, useState } from "react";
+import { Link } from "react-router";
 import { sanitizeInput, validateForm } from "../utils/formValidation";
 import { sendContactEmail } from "../utils/emailService";
 
@@ -124,6 +125,17 @@ const Form = () => {
               className="bg-white rounded-lg px-4 py-3 shadow-sm border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/30 outline-none transition resize-y"
             />
           </div>
+
+          <p className="mx-auto max-w-2xl text-center text-xs leading-relaxed text-black/70 sm:text-sm">
+            S posredovanjem obrazca potrjujete, da ste seznanjeni s{" "}
+            <Link
+              to="/politika-zasebnosti"
+              className="font-semibold text-primary underline underline-offset-4 transition-opacity hover:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            >
+              Politiko zasebnosti
+            </Link>
+            . Vaše podatke bomo uporabili za odgovor na povpraševanje.
+          </p>
 
           {/* Submit button */}
           <div className="flex justify-center mt-2">
