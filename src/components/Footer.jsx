@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router";
 import logo from "../assets/footer-logo.svg";
 
 const Footer = () => {
@@ -7,9 +7,9 @@ const Footer = () => {
   return (
     <footer className="bg-background py-6 md:py-8 lg:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex flex-col md:flex-row items-center justify-center md:justify-center gap-4 md:gap-2 lg:gap-2">
+        <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-3 md:gap-6">
           {/* Logo */}
-          <div className="flex items-center order-1 md:order-1 md:flex-1">
+          <div className="order-1 justify-self-center md:justify-self-start">
             <img
               src={logo}
               alt="KD storitve"
@@ -18,9 +18,16 @@ const Footer = () => {
           </div>
 
           {/* Copyright text */}
-          <p className="text-xs sm:text-sm text-primary font-medium text-center order-3 md:order-2 md:flex-1">
+          <p className="order-3 justify-self-center text-center text-xs font-medium text-primary sm:text-sm md:order-2">
             Copyright © {currentYear}. KD storitve d.o.o. Vse pravice pridržane.
           </p>
+
+          <Link
+            to="/politika-zasebnosti"
+            className="order-2 justify-self-center text-xs text-primary underline underline-offset-4 transition-opacity hover:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 sm:text-sm md:order-3 md:justify-self-end"
+          >
+            Politika zasebnosti
+          </Link>
         </div>
       </div>
     </footer>

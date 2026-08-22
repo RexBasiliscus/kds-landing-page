@@ -5,6 +5,7 @@ import Ciscenje from "./pages/Ciscenje";
 import Vzdrzevanje from "./pages/Vzdrzevanje";
 import Onas from "./pages/Onas";
 import Kontakt from "./pages/Kontakt";
+import PolitikaZasebnosti from "./pages/PolitikaZasebnosti";
 import MainLayout from "./layouts/MainLayout";
 import { scrollToTop } from "./utils/scrollToTop";
 
@@ -58,7 +59,6 @@ const App = () => {
     <BrowserRouter>
       <ScrollHandler />
       <Routes>
-        {/* Single main layout for all pages */}
         <Route element={<MainLayout />}>
           <Route
             path="/"
@@ -79,6 +79,10 @@ const App = () => {
           <Route
             path="/kontakt"
             element={<Kontakt />}
+          />
+          <Route
+            path="/politika-zasebnosti"
+            element={<PolitikaZasebnosti />}
           />
           {/* Fallback */}
           <Route
