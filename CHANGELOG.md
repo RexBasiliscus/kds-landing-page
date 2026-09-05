@@ -32,6 +32,11 @@ and the live site has been verified.
 - Reworked the footer into a responsive three-column layout to accommodate the privacy-policy link.
 - Removed redundant Google Fonts imports from `index.html`.
 
+### Fixed
+
+- Fixed blank GitHub Pages deployments by building assets under the repository subpath and configuring the router to use Vite's deployment base.
+- Added a GitHub Pages SPA fallback so direct navigation to client-side routes loads the application.
+
 ## [1.0.0] - 2026-02-20
 
 ### Deployment

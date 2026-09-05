@@ -9,6 +9,8 @@ import PolitikaZasebnosti from "./pages/PolitikaZasebnosti";
 import MainLayout from "./layouts/MainLayout";
 import { scrollToTop } from "./utils/scrollToTop";
 
+const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, "") || "/";
+
 const App = () => {
   function ScrollHandler() {
     const location = useLocation();
@@ -56,7 +58,7 @@ const App = () => {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={routerBasename}>
       <ScrollHandler />
       <Routes>
         <Route element={<MainLayout />}>
