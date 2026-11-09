@@ -44,7 +44,7 @@ const ContactInfo = () => {
                   Naslov
                 </p>
                 <p className="text-sm md:text-base font-semibold text-black mt-1">
-                  Litijska cesta 184a
+                  Trg Komandanta Staneta 8
                 </p>
               </div>
 
@@ -53,7 +53,7 @@ const ContactInfo = () => {
                   Poštna št. in mesto
                 </p>
                 <p className="text-sm md:text-base font-semibold text-black mt-1">
-                  1261 Ljubljana - Dobrunje
+                  1000 Ljubljana
                 </p>
               </div>
 
