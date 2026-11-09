@@ -26,7 +26,7 @@ const PolitikaZasebnosti = () => {
               <p>
                 Upravljavec osebnih podatkov je: KD STORITVE, družba za
                 upravljanje, vzdrževanje in čiščenje objektov, d.o.o. s sedežem
-                na naslovu Litijska cesta 184a, 1261 Ljubljana-Dobrunje.
+                na naslovu Trg Komandanta Staneta 8, 1000 Ljubljana.
               </p>
               <div className="mt-3 space-y-1">
                 <p>Matična številka: 8789495000</p>
